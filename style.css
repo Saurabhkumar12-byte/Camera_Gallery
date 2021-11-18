@@ -17,27 +17,26 @@ video {
 }
 
 .action-cont {
-    height: 26rem;
-    width: 4rem;
+    height: 12rem;
+    width: 5rem;
     /* background-color: lightblue; */
     position: absolute;
-    top: calc( ( 100vh - -36rem ) / 2 );
-    right: 9rem;
+    top: calc( ( 100vh - 12rem ) / 2 );
+    right: 5rem;
     color: white;
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: column;
     justify-content: space-between;
     z-index: 2;
 }
 .action-cont > * {
     width: 100%;
-    height: 4rem;
+    height: 5rem;
     border-radius: 50%;
     border: 5px solid white;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 0.3rem;
 }
 .record-btn {
     background-color: red;
@@ -93,12 +92,12 @@ video {
 
 .filter-cont {
     position: absolute;
-    top: calc( (100vh - 2rem ) / 2 );
-    /* left: 5rem; */
-    height: 10rem;
-    width: 4rem;
+    top: calc( (100vh - 16rem ) / 2 );
+    left: 5rem;
+    height: 16rem;
+    width: 5rem;
     background-color: aqua;
-    z-index: 2; 
+    z-index: 2;
 }
 
 .filter {
@@ -138,10 +137,52 @@ video {
 }
 .gallery {
     position: absolute;
-    right: 1rem;
-    bottom: 4rem;
+    right: 6rem;
+    bottom: 7rem;
     z-index: 2;
 }
 .gallery:hover {
     cursor: pointer;
 }
+
+@media only screen and (max-width: 600px) {
+    .filter-cont {
+        position: absolute;
+        top: calc( (100vh - -6rem ) / 2 );
+        left: 0rem;
+        height: 16rem;
+        width: 5rem;
+        background-color: aqua;
+        z-index: 2;
+    }
+    .action-cont {
+        height: 12rem;
+        width: 4.8rem;
+        /* background-color: lightblue; */
+        position: absolute;
+        top: calc( ( 100vh - -38rem ) / 2 );
+        right: 9rem;
+        color: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        z-index: 2;
+    }
+    .action-cont > * {
+        width: 100%;
+        height: 4rem;
+        border-radius: 49%;
+        border: 5px solid white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .gallery {
+        position: absolute;
+        right: 0rem;
+        bottom: 3rem;
+        z-index: 2;
+        margin-right: .2rem;
+    }
+  }
